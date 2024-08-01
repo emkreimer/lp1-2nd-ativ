@@ -6,26 +6,25 @@
 
 using namespace std;
 
-template <typename T> class Vetor
+template <typename T>
+class Vetor
 {
-	private:
-		Node<T>* ptr;
-		int tamanho;
-		void clear();
+private:
+	Node<T> *ptr;
+	int tamanho;
+	void clear();
 
-	public:
-		Vetor();
-		~Vetor();
+public:
+	Vetor();
+	~Vetor();
 
-		int size() const;
-		bool add(T i_);
-		bool remove(int i);
-		void show() const;
-		T at(int i) const;
-		bool sort(bool (*func_compara)(T, T));
-
+	int size() const;
+	bool add(T i_);
+	bool remove(int i);
+	void show() const;
+	T at(int i) const;
+	bool sort(bool (*func_compara)(const T &, const T &));
 };
 
 #include "vetor.cpp"
 #endif
-
