@@ -30,7 +30,7 @@ void bubbleSort(T *array, int size, bool (*func_compara)(const T &, const T &))
     }
 }
 
-//<------------- FIM DAS FUN��ES EXTRAS ---------->
+//<------------- FIM DAS FUNCOES EXTRAS ---------->
 
 template <typename T>
 Vetor<T>::Vetor() : ptr(nullptr), tamanho(0) {}
@@ -126,7 +126,11 @@ template <typename T>
 T Vetor<T>::at(int i) const
 {
     if (i < 0 || i >= tamanho)
-        throw std::out_of_range("Esse �ndice n�o existe!");
+    {
+        cout << endl
+             << "Esse índice não existe!" << endl;
+        throw std::out_of_range("error");
+    }
 
     Node<T> *temp = ptr;
     for (int j = 0; j < i; ++j)

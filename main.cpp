@@ -137,6 +137,9 @@ int main()
 			 << "-------ORDENANDO------" << endl;
 		s.sort(comparar_str);
 		s.show();
+		cout << endl
+			 << "-------TESTANDO EXCECAO------" << endl;
+		s.at(10);
 
 		cout << "---------FIM Teste STRINGS ---------" << endl;
 
